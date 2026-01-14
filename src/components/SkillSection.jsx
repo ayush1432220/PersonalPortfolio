@@ -61,7 +61,7 @@ export default function SkillsSection() {
         { title: "Frontend Development", icon: <Monitor className="w-6 h-6" />, skills: ["React.js", "JavaScript ES6+", "Tailwind CSS", "Framer Motion"], color: "blue", repos: ["MediaDiscover", "QuizApp", "Suduko-Pro"] },
         { title: "Backend Development", icon: <Server className="w-6 h-6" />, skills: ["Node.js", "Express.js", "RESTful APIs", "Authentication"], color: "emerald", repos: ["X_automation"] },
         { title: "Database & Storage", icon: <Database className="w-6 h-6" />, skills: ["MongoDB", "Mongoose ODM", "Cloudinary", "Data Modeling"], color: "purple", repos: [] },
-        { title: "Programming Languages", icon: <Code className="w-6 h-6" />, skills: ["C/C++", "Python", "Java", "JavaScript"], color: "orange", repos: ["MessageCrypto"] },
+        { title: "Programming Languages", icon: <Code className="w-6 h-6" />, skills: ["C", "Java", "JavaScript"], color: "orange", repos: ["MessageCrypto"] },
         { title: "AI & Machine Learning", icon: <Brain className="w-6 h-6" />, skills: ["Generative AI", "FastAPI", "OpenCV", "Computer Vision"], color: "pink", repos: ["ForestAgent", "AI-News-Summarizer"] },
         { title: "Robotics & Hardware", icon: <Cpu className="w-6 h-6" />, skills: ["Arduino Programming", "Sensor Integration", "Autonomous Systems"], color: "indigo", repos: [] },
         { title: "Tools & DevOps", icon: <GitBranch className="w-6 h-6" />, skills: ["Git & GitHub", "Version Control", "Zustand State", "API Integration"], color: "cyan", repos: [] }
