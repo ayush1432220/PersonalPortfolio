@@ -1,12 +1,40 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <link rel="icon" type="image/jpg" href="/logo.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ayush's Portfolio</title>
+    <title>Ayush Chaurasiya — Full-Stack Developer & AI/Robotics Engineer</title>
+    <meta name="description" content="Portfolio of Ayush Chaurasiya, a Full-Stack Developer, AI/ML Craftsman, and 4x National Robotics Champion building high-performance digital solutions." />
+    <meta name="theme-color" content="#030712" />
+    <!-- TODO: once this is deployed, set rel="canonical" and og:url/twitter:url to the live URL -->
+    <script>
+      // Apply the saved theme before first paint to avoid a flash of the wrong theme.
+      try {
+        if (localStorage.getItem("portfolio-theme") === "light") {
+          document.documentElement.classList.add("light");
+        }
+      } catch (e) {}
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Ayush Chaurasiya — Full-Stack Developer & AI/Robotics Engineer" />
+    <meta property="og:description" content="Portfolio of Ayush Chaurasiya, a Full-Stack Developer, AI/ML Craftsman, and 4x National Robotics Champion building high-performance digital solutions." />
+    <meta property="og:image" content="/logo.jpg" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ayush Chaurasiya — Full-Stack Developer & AI/Robotics Engineer" />
+    <meta name="twitter:description" content="Portfolio of Ayush Chaurasiya, a Full-Stack Developer, AI/ML Craftsman, and 4x National Robotics Champion building high-performance digital solutions." />
+    <meta name="twitter:image" content="/logo.jpg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="bg-bg-page text-text-primary font-sans selection:bg-purple-500/30 selection:text-purple-200 antialiased overflow-x-hidden">
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
