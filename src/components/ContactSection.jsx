@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Phone, Linkedin, Github, Rocket, Check, Copy, ArrowUpRight, Sparkles, Send, Loader2, AlertCircle } from "lucide-react";
 import { SectionWrapper, SectionHeader, GlassCard, IconBox, PrimaryButton, containerVariants, cardVariants, focusRing, contentMaxWidth } from "./DesignSystem";
 
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_URL = import.meta.env.VITE_API_URL || "";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function ContactSection() {
