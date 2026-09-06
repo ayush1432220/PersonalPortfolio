@@ -6,7 +6,9 @@ import reactRefresh from 'eslint-plugin-react-refresh'
 import { defineConfig, globalIgnores } from 'eslint/config'
 
 export default defineConfig([
-  globalIgnores(['dist', 'server/**']),
+  // server/** and api/** are Node runtimes (process, serverless handlers), not
+  // browser code — they don't fit this browser-globals config.
+  globalIgnores(['dist', 'server/**', 'api/**']),
   {
     files: ['**/*.{js,jsx}'],
     extends: [

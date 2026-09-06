@@ -3,7 +3,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Mail, Phone, Linkedin, Github, Rocket, Check, Copy, ArrowUpRight, Sparkles, Send, Loader2, AlertCircle } from "lucide-react";
 import { SectionWrapper, SectionHeader, GlassCard, IconBox, PrimaryButton, containerVariants, cardVariants, focusRing, contentMaxWidth } from "./DesignSystem";
 
-const API_URL = import.meta.env.VITE_API_URL || "";
+// Same-origin relative path in BOTH environments:
+//   production → Vercel serverless function (api/contact.js)
+//   local dev  → Vite proxies /api to the Express server (see vite.config.js)
+//
+// Deliberately NOT configurable via an env var. VITE_* values are inlined at
+// build time, so an absolute fallback (e.g. http://localhost:5000) ships inside
+// the production bundle and makes every visitor's browser POST to their own
+// machine — which is exactly how this broke in production.
+const CONTACT_ENDPOINT = "/api/contact";
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export default function ContactSection() {
@@ -36,7 +44,7 @@ export default function ContactSection() {
     setErrorMsg("");
 
     try {
-      const res = await fetch(`${API_URL}/api/contact`, {
+      const res = await fetch(CONTACT_ENDPOINT, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
